@@ -1,0 +1,80 @@
+<body>
+  <!-- Main content -->
+  <section class="content">
+    <br>
+    <div class="container-fluid">
+      <h4>Ajouter un nouveau contrat :</h4><br>
+      <div class="row justify-content-center">
+        <!-- left column -->
+        <div class="col-md-12">
+          <!-- general form elements -->
+          <div class="card card-primary"style="background-color:#ffffff;">
+            <div class="card-header" style="background-color: #14B5E9;">
+              <h3 class="card-title"style="color: #ffffff;">Formulaire d'ajout</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Date de création </label>
+                      <input type="date" class="form-control" id="exampledate1" placeholder="Entre la date de création">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                      <label>Date de début
+                      </label>
+                      <input type="date" class="form-control" id="exampledate2" placeholder="Entrer la date de début">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                      <label>Date d'expiration
+                      </label>
+                      <input type="date" class="form-control" id="exampledate3" placeholder="Entrer la date d'expiration">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Prix du contrat
+                      </label>
+                      <input type="number" class="form-control" id="examplenumber1" placeholder="Entre le prix du contrat">
+                    </div>
+                    <br>
+                      <div class="form-group">
+                      <label>Formalité de paiement
+                      </label>
+                      <input type="text" class="form-control" id="exampletext" placeholder="Entre la formalité de payment">
+                    </div>
+                <!-- <div class="form-group">
+                      <mat-form-field>
+                      <mat-label>Formalité de paiement
+                      </mat-label>
+                      <input matInput type="text" [matAutocomplete]="auto"/>
+                      <mat-autocomplete #auto="matAutocomplete">
+                        <mat-option value="BankCard">BackCard</mat-option>
+                      </mat-autocomplete>
+                    </mat-form-field>
+                    </div> -->
+                    <br>
+                    <div class="form-group">
+                      <label>Date de paiement
+                      </label>
+                      <input type="date" class="form-control" id="exampledate4" placeholder="Entrer la date de paiement">
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary" style="background-color: #14B5E9;border-color: #14B5E9;margin-right: 100px;"(click)="AddContracts()">Ajouter</button>
+                <button type="submit" class="btn btn-primary" style="background-color: #14B5E9;border-color: #14B5E9;">Imprimer</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+</body>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulaire de paiement</title>
+  <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+<h1>Formulaire de paiement</h1>
+<p>Montant à payer : <span th:text="${montant}"></span> €</p>
+<form th:action="@{'/paiements/' + ${contrat.id}}" method="post">
+  <script
+          src="https://checkout.stripe.com/checkout.js"
+          class="stripe-button"
+          data-key="${stripePublicKey}"
+          data-name="ForYou microinsurance "
+          data-description="Paiement contrat n°${contrat.id}"
+          data-amount="${montant * 100}"
+          data-email="${contrat.email}"
+          data-locale="auto">
+  </script>
+</form>
+</body>
+</html>

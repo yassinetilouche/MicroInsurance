@@ -1,0 +1,47 @@
+
+<body>
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">Liste des contracts : </h3>
+  </div>
+  <!-- /.card-header -->
+  <div class="card-body">
+    <table id="example1" class="table table-bordered table-striped"style="font-size:small;" >
+      <thead style="background-color: #14B5E9;font-size:small; color: #ffffff;">
+      <tr>
+        <th>Identifiant</th>
+        <th>Date de création</th>
+        <th>Date début</th>
+        <th>Date d'expiration</th>
+        <th>Prix de contrat</th>
+        <th>Nombre de tranche</th>
+        <th>Durée</th>
+        <th>Dernier renouvellement</th>
+        <th>Formalité de payment</th>
+        <th>Date de payment</th>
+        <th>Type de payment</th>
+        <th>Renouvellement</th>
+      </tr>
+      </thead>
+      <tbody *ngFor="let c of listContract">
+      <tr (click)="goTo(c.contract_id)">
+        <td>{{c.contract_id}}</td>
+        <td>{{c.creationDate}}</td>
+        <td>{{c.startDate}}</td>
+        <td>{{c.exprirationDate}}</td>
+        <td>{{c.ceilingAmount}}</td>
+        <td>{{c.installementsnbr}}</td>
+        <td>{{c.exprirationDate}} - {{c.startDate}}</td>
+        <td>{{c.lastRenewalDate}}</td>
+        <td>{{c.paymentFormality}}</td>
+        <td>{{c.paymentDate}}</td>
+        <td>{{c.paymentType}}</td>
+        <td>{{c.renewable}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- /.card-body -->
+</div>
+<!-- /.card -->
+</body>
